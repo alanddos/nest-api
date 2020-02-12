@@ -12,8 +12,6 @@ export class UsersService {
   ) { }
 
   async findOne(login: any): Promise<User | undefined> {
-    console.log('Veio pesquisar', login)
-    let teste = await this.userRepository.findOne({ name: login.username, password: login.password });
-    return teste
+    return await this.userRepository.findOne({ name: login.username, password: login.password });    
   }
 }
