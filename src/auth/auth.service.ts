@@ -20,6 +20,7 @@ export class AuthService {
   }
 
   async login(login: any) {
+    console.log(login)
     const user = await this.usersService.findOne(login);
     if (user){
       const payload = { username: user.name, sub: user.id };

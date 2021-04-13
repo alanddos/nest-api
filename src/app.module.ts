@@ -11,14 +11,15 @@ import { UsersService } from './users/users.service'
 //conexao com o banco da dados
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
-import { PhotoModule } from './photo/photo.module';
+//import { PhotoModule } from './photo/photo.module';
 
 @Module({
   imports: [
     AuthModule,
     TypeOrmModule.forRoot(),//forRoot sem paramentos busca do ormconfig.json
     UsersModule,
-    PhotoModule],
+    //PhotoModule
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
